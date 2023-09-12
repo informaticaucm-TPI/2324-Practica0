@@ -32,7 +32,7 @@ Open a terminal `cmd.exe` (Windows > Ejecutar > `cmd.exe`)[^1] and execute the f
 in order to set the current folder to `hlocal`. Now open a text file called "HelloWorld.java" in this folder using notepad,
 notepad++, VS Code or any other text editor. The following figure shows how to invoke notepad from the Windows command line.
 
-![image](img/23_24_im00.png)
+![image](../img/23_24_im00.png)
 
 Alternatively, open the text editor using the appropriate icon, create a new file called "HelloWorld.java" and save it to the
 `hlocal` folder.
@@ -51,7 +51,7 @@ public class HelloWorld {
 }
 ```
 
-![image](img/23_24_im1.png)
+![image](../img/23_24_im1.png)
 
 ### Step 3:
 
@@ -63,7 +63,7 @@ javac HelloWorld.java
 
 If there are no compilation errors, a file called `HelloWorld.class` containing the corresponding bytecode will be created
 
-![image](img/23_24_im7.png)
+![image](../img/23_24_im7.png)
 
 However, if the path to the compiler executable (`javac.exe`) is not one of the paths contained in the `PATH` environment variable, the system will not find this executable and, consequently, will not be able to execute the `javac` command. To this end, we add the address of the `bin` folder of the JDK, which contains the executable file for this command and others, to the list of paths contained in the `PATH` variable. In the labs the required path is `C:\JDK\jdk17-x86_64\bin` which we can add to the `PATH` variable from the Windows command line as follows:
 
@@ -79,13 +79,13 @@ java -version
 
 as shown in the following figure:
 
-![image](img/im7_j17.png)
+![image](../img/im7_j17.png)
 
 ### Step 4:
 
 Executing our application involves executing the Java virtual machine (JVM) and telling it to use the `main` method of the bytecode contained in the file `HelloWorld.class` as the entry point to the application. We do so by executing the command `java HelloWorld`[^2]. As was the case for the command to compile the java source code, the JVM executable, `java.exe`, must be in one of the folders of the `PATH` environment variable or the OS will not be able to find it and execute it. In the labs this executable can be found in the same folder as the compiler executable (the `bin` folder of the JDK), which we have already added to the `PATH` variable.
 
-![image](img/im777.png)
+![image](../img/im777.png)
 
 ## Part II: "Hello World" in Eclipse
 
@@ -111,49 +111,49 @@ Execute `Eclipse.exe`.
 
 Create a new workspace. If Eclipse is already open, change the desired workspace via *File* -> *Switch Workspace*.
 
-![image](img/23_24_im2.png)
-![image](img/23_24_im4.png)
+![image](../img/23_24_im2.png)
+![image](../img/23_24_im4.png)
 
 ### Step 3:
 
 Create a project: *File* -> *New* -> *Java Project*. Recall that you should create a new project for each assignment. Note that in the last section of the *New Java Project* window called *Module* **deselect the *Create module-info.java file*** if it is selected.
 
-![image](img/23_24_eclipse_circle.png)
+![image](../img/23_24_eclipse_circle.png)
 
 ### Step 4:
 
 On creating a project you must indicate the location of the folders where you wish to store the source code and the compiled code. You can simply accept the default values proposed by Eclipse (i.e. two top-level folders: `src` and `bin`).
 
-![image](img/23_24_im6.png)
+![image](../img/23_24_im6.png)
 
 ### Step 5:
 
 Strictly speaking, this step is not required when working in English since, in that case, there is no need to use any non-ASCII characters (note that the comments in your code should also be in English). However, since it is information of interest for using Eclipse in a non-English speaking country, if you want to use non-ASCII characters in your comments, it is advisable to configure the project to use the *UTF-8* character encoding. To do so, select the project, click on it with the right mouse button and select the *Properties* option. Then choose the *Resource* menu and modify *Text File Encoding*, selecting *Other* and indicating *UTF-8*.
 
-![image](img/23_24_im66.png)
+![image](../img/23_24_im66.png)
 
 Instead of setting the character encoding for each project, you can also set it for all the projects in a workspace. To do so, select *Window* -> *Preferences* and choose the *General* -> *Workspace* menu. Then modify the *Text File Encoding*, selecting *Other* and indicating *UTF-8*.
 
-![image](img/im666.png)
+![image](../img/im666.png)
 
 ### Step 6:
 
 Having configured Eclipse and created a new Java project, we now write our first program, creating a class called `HelloWorld.java` by selecting 
 *new Class* in the *File* menu. As well as providing the class name, you can also ask Eclipse to create the stub of the `main` method.
 
-![image](img/23_24_im8.png)
+![image](../img/23_24_im8.png)
 
 ### Step 7:
 
 We see that Eclipse has created the file `HelloWorld.java` in the appropriate folder `C:\hlocal\TP\Pr0\src\HelloWorld.java`.
 
-![image](img/23_24_im88.png)
+![image](../img/23_24_im88.png)
 
 ### Step 8:
 
 Write the code of the "HelloWorld" class.
 
-![image](img/23_24_im9.png)
+![image](../img/23_24_im9.png)
 
 ### Step 9:
 
@@ -163,32 +163,32 @@ Eclipse offers different ways to execute the application, one of them being:
 -   Click on the right button.
 -   Select *Run As* -> *Java Application*.
 
-![image](img/23_24_im10.png)
+![image](../img/23_24_im10.png)
 
 Another alternative is to click on the green "Run" icon after selecting the `HelloWorld.java` class in the *Package Explorer* tab.
 
-![image](img/23_24_im99.png)
+![image](../img/23_24_im99.png)
 
 ### Step 10:
 
 Eclipse has now compiled our source code file and the result of this compilation is a file called `HelloWorld.class` in the `C:\hlocal\TP\Pr0\bin\` folder.
 
-![image](img/23_24_im12.png)
+![image](../img/23_24_im12.png)
 
 
 ## Part III: using packages
 
 In Eclipse, classes are organised in *packages*. To create a package, select the *src* folder using Right-Click in the *Package Explorer* tab and then select *File* -> *New* -> *package*.
 
-![image](img/23_24_im13.png)
+![image](../img/23_24_im13.png)
 
 Create the package `tp.pr0`.
 
-![image](img/23_24_im13m.png)
+![image](../img/23_24_im13m.png)
 
 Create the class `Pr0Main` in the package `tp.pr0`.
 
-![image](img/23_24_im13m2.png)
+![image](../img/23_24_im13m2.png)
 
 In this class, as well as having a `main` method, in order to be executable, we are going to add another static method that will be called from the `main`. Being a static method, it is not necessary to instantiate an object in order to invoke it on that object; instead, it is invoked using the name of the class.
 
@@ -225,7 +225,7 @@ We create the class `MathsFunctions` in the `tp.pr0` package, which contains a m
 
 Both methods are described in the following document generated by the command `javadoc`:
 
-![image](img/23_24_pr0doc.png)
+![image](../img/23_24_pr0doc.png)
 
 Take into account that, as indicated in the documentation of the class:
 
@@ -284,20 +284,20 @@ Firstly we will do is create a file[^4] called 'combinatorial_expected_output.tx
 
 Once the file with the expected output is created, we will write our program output into a file. To do this, you must change some parameters of the execution management: Right Click on 'Pr0Main.java' *Run as* -> *Run Configurations...*. Here you will find a tab called 'Commons' that you will have to configure as shown in the following figure:
 
-![Commons Configuration](img/23_24_testing01.png)
+![Commons Configuration](../img/23_24_testing01.png)
 
 
 There are many free programs to visually compare files, for example Eclipse already has integrated a tool to compare files that you can launch by selecting two files, right-clicking and in the pop-up menu select 'Compare With > Each other'.
 
-![How to compare two files using Eclipse](img/23_24_testing02.png)
+![How to compare two files using Eclipse](../img/23_24_testing02.png)
 
 A new window will display where the differences between the files are marked. If the output is as expected, the result will be the following:
 
-![Output Successful in Eclipse File Comparison Tool] (img/23_24_testing03.png)
+![Output Successful in Eclipse File Comparison Tool] (../img/23_24_testing03.png)
 
 If the output does not match, Eclipse will highlight it as follows (in this example the line of the method developed in the previous section was deliberately uncommented):
 
-![Incorrect Output in Eclipse File Comparison Tool] (IMG/23_24_testing04.png)
+![Incorrect Output in Eclipse File Comparison Tool] (../img/23_24_testing04.png)
 
 
 ## Part VI: submission of the assignment
@@ -308,7 +308,7 @@ To submit the finished assignment, we use the Campus Virtual submission mechanis
 
 - The folder `src` containing the source code of the solution.
 
-![image](img/23_24_entrega_01.png)
+![image](../img/23_24_entrega_01.png)
 
 - Optionally, the project files / folders generated by Eclipse, namely the files `.classpath` and `.project` and the folder `.settings` (by default, `.settings` and `.project` are not visible in Eclipse).
 
@@ -331,11 +331,11 @@ To finish configuring Eclipse, we are going to install (or check that it is alre
 
 - Select *Eclipse Marketplace* in the *Help* menu.
 
-![image](img/MD01.png)
+![image](../img/MD01.png)
 
 In the search textbox write "*wikitext*":
 
-![image](img/MD02.png)
+![image](../img/MD02.png)
 
 Check that you have the "*Mylyn WikiText 3.0*" plugin installed. Both in FDI labs and on your own computer installation, it will appear by default as long as you are using the recommended version of Eclipse.
 
@@ -346,21 +346,21 @@ As stated at the beginning of these instructions, the version of Eclipse that we
 
 Select *Window* -> *Preferences*, type "JRE" in the search textbox, navigate to the option *Java* -> *Installed JREs* and click on the *Add...* button.
 
-![image](img/JREworkspace01.png)
+![image](../img/JREworkspace01.png)
 
 In the next window, check that the option "Standard VM" is selected and the click on the *Next...* button.
 
-![image](img/JREworkspace02.png)
+![image](../img/JREworkspace02.png)
 
 In the next window, click on the *Directory...* button and select the folder where you have installed the Java installation that you wish to use.
 
-![image](img/JREworkspace03.png)
+![image](../img/JREworkspace03.png)
 
 If the folder contains a Java installation, Eclipse will automatically fill in some of the sections of this window. If this is the case, simply click on the *Finish* button.
 
-![image](img/JREworkspace04.png)
+![image](../img/JREworkspace04.png)
 
 To avoid having to configure each new project to use this Java installation, you can also configure Eclipse to use this installation for all the projects of a workspace.
 
-![image](img/JREworkspace05.png)
+![image](../img/JREworkspace05.png)
 
